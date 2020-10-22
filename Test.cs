@@ -1,33 +1,32 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 
 namespace Student
 {
     class Test
     {
         static void Main(string[] args)
-        {
-            
-            Student s1 = new Student("ALi SHahid", "2018-CS-111");
-          
-            if (s1.Input())
-                Console.WriteLine(s1.toString());
+        {            
+            Student s1 = new Student();     //object with default constructor
+            Student s2 = new Student("Name", "2020-SE-645"); //object with parameters
+
+            s1.display();
+            Console.WriteLine("");
+            s2.display();
+
+            Console.WriteLine("Taking input of student 1:");
+            s1.Input();         //taking input
+            Console.WriteLine(s1.toString());      
 
             Console.WriteLine("\n\n\n----------------------------------------------------\n\n\n");
+                              
+            s2.Input();
 
-            Student s2= new Student();
-
-            if (s1.Input())
-                Console.WriteLine(s1.toString());
-
-            Console.WriteLine("Program Ended");
-            Console.Read();
-
+            Console.WriteLine(s2.toString());
+                        
+            Console.WriteLine("\nProgram Ended. Press any key to exit.\n");
+            Console.Read();     
 
         }
     }
 }
+
